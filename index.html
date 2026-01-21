@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Social Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">My Social Profile</div>
+
+<div class="row-container">
+
+    <!-- PROFILE -->
+    <div class="card">
+        <h3>Profile</h3>
+        <img src="https://i.pravatar.cc/300?img=12" class="profile-pic">
+        <h2 id="name">Aditya Singh</h2>
+        <p id="bio">Web Developer</p>
+
+        <button onclick="toggleEdit()">Edit Profile</button>
+
+        <div id="editBox" class="edit-box">
+            <input type="text" id="nameInput" placeholder="New Name">
+            <input type="text" id="bioInput" placeholder="New Bio">
+            <button onclick="updateProfile()">Save</button>
+        </div>
+    </div>
+
+    <!-- POSTS -->
+    <!-- POSTS -->
+<div class="card">
+    <h3>Posts</h3>
+
+    <div class="post-img">
+        <img src="https://picsum.photos/400/250?random=1" alt="post1">
+        <p>Enjoying nature 🌿</p>
+    </div>
+
+    <div class="post-img">
+        <img src="https://picsum.photos/400/250?random=2" alt="post2">
+        <p>Trip</p>
+    </div>
+
+    <div class="post-img">
+        <img src="https://picsum.photos/400/250?random=3" alt="post3">
+        <p> 😎</p>
+    </div>
+</div>
+
+
+    <!-- REELS -->
+    <div class="card">
+        <h3>Reels</h3>
+        <div class="reels-vertical">
+            <div class="reel-v">
+                <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoplay muted loop></video>
+            </div>
+            <div class="reel-v">
+                <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" autoplay muted loop></video>
+            </div>
+        </div>
+    </div>
+
+    <!-- FRIENDS -->
+    <div class="card">
+        <h3>Friends</h3>
+        <div class="friend">saloni</div>
+        <div class="friend">Sahil Kanwar</div>
+        <div class="friend">Dev Taliyan</div>
+        <div class="friend">Aman Tiwari</div>
+    </div>
+
+</div>
+
+<script>
+function toggleEdit() {
+    let box = document.getElementById("editBox");
+    box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+function updateProfile() {
+    let name = document.getElementById("nameInput").value;
+    let bio = document.getElementById("bioInput").value;
+
+    if (name !== "") document.getElementById("name").innerText = name;
+    if (bio !== "") document.getElementById("bio").innerText = bio;
+
+    document.getElementById("editBox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
