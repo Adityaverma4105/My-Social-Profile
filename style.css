@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+}
+
+.header {
+    background: linear-gradient(to right, #1e3c72, #2a78d2);
+    color: white;
+    text-align: center;
+    font-size: 26px;
+    padding: 15px;
+}
+
+.row-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    height: calc(100vh - 80px); /* full screen minus header */
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+
+    flex: 1;              /* all cards equal width */
+    height: 100%;        /* full container height */
+    overflow-y: auto;   /* scroll inside */
+}
+
+/* Profile */
+.profile-pic {
+    width: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+    border: 3px solid #1877f2;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 6px;
+    background: #1877f2;
+    color: white;
+}
+
+/* Edit */
+.edit-box {
+    display: none;
+}
+
+.edit-box input {
+    width: 100%;
+    padding: 6px;
+    margin: 4px 0;
+}
+
+/* Friends */
+.friend {
+    background: #f1f1f1;
+    padding: 8px;
+    margin: 6px 0;
+    border-radius: 6px;
+}
+
+/* Reels */
+.reels-vertical {
+    height: 60vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.reel-v {
+    height: 60vh;
+    scroll-snap-align: start;
+    background: black;
+    margin-bottom: 10px;
+}
+
+.reel-v video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.post-img {
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.post-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post-img p {
+    padding: 8px;
+    font-size: 14px;
+}
